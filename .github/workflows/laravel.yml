@@ -24,9 +24,11 @@ jobs:
     - name: Generate db
       run: docker exec php_app bash || php artisan migrate
     - name: Login to GitHub Docker Registry
-      run: docker login docker.pkg.github.com --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
+      run: docker login docker.pkg.github.com -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
       env:
           DOCKER_USERNAME: ${{ secrets.GITHUB_DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.GITHUB_DOCKER_PASSWORD }}
+    - name: build
+      run: docker build -t temails .
     - name: push 
       run: docker push sonambhatnagar/temails:tagname
