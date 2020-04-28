@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>PHP</ID>
+  <OriginalElement>\App\Http\Controllers\EmailController</OriginalElement>
+  <nodes>
+    <node x="696.0" y="973.0">\App\Models\EmailModel</node>
+    <node x="312.0" y="102.0">\App\Services\SendGridEmailService</node>
+    <node x="0.0" y="973.0">\App\Http\Middleware\SecurityCheckMiddleware</node>
+    <node x="708.0" y="0.0">\SendEmailTest</node>
+    <node x="419.25" y="0.0">\App\Services\Interfaces\IMailer</node>
+    <node x="829.0" y="662.0">\App\Events\EmailSentEvent</node>
+    <node x="0.0" y="1115.0">\App\Transformers\ResponseInfoTransformer</node>
+    <node x="73.5" y="662.0">\App\Services\Interfaces\IEmailServices</node>
+    <node x="0.0" y="786.0">\App\Services\EmailServices</node>
+    <node x="397.0" y="662.0">\App\Http\Controllers\EmailController</node>
+    <node x="348.0" y="973.0">\App\Repositories\EmailRepository</node>
+    <node x="0.0" y="0.0">\App\Services\Interfaces\IMail</node>
+    <node x="251.0" y="1115.0">\App\Listeners\EmailSentNotificationListener</node>
+    <node x="0.0" y="300.0">\App\Services\Mail</node>
+    <node x="499.0" y="113.0">\App\Services\MailJetEmailService</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="\App\Services\SendGridEmailService" target="\App\Services\Interfaces\IMailer">
+      <point x="0.0" y="-126.5" />
+      <point x="395.5" y="77.0" />
+      <point x="453.75" y="77.0" />
+      <point x="-34.5" y="26.0" />
+    </edge>
+    <edge source="\App\Services\MailJetEmailService" target="\App\Services\Interfaces\IMailer">
+      <point x="0.0" y="-115.5" />
+      <point x="581.0" y="77.0" />
+      <point x="522.75" y="77.0" />
+      <point x="34.5" y="26.0" />
+    </edge>
+    <edge source="\App\Services\EmailServices" target="\App\Services\Interfaces\IEmailServices">
+      <point x="0.0" y="-71.0" />
+      <point x="0.0" y="37.0" />
+    </edge>
+    <edge source="\App\Services\Mail" target="\App\Services\Interfaces\IMail">
+      <point x="0.0" y="-158.5" />
+      <point x="0.0" y="125.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.8857839155158407" x="529.7173913043476" y="225.2951505016722" />
+  <SelectedNodes>
+    <node>\App\Services\SendGridEmailService</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constants</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Fields</Category>
+  </Categories>
+  <VISIBILITY>protected</VISIBILITY>
+</Diagram>
+
